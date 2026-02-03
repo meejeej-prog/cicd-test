@@ -55,7 +55,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }} # .pem 키 파일 내용
 
           # 접속 성공 후 EC2 안에서 실행할 리눅스 명령어들입니다. 파이프 기호 다음에 띄워서는 안됩니다.
-          script: |DOCKERHUB_USERNAME
+          script: |
             # 도커 허브에서 방금 만든 이미지를 내려받습니다.
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-app:latest
 
